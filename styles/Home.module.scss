@@ -1,0 +1,131 @@
+.main {
+  margin: 100px 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    max-width: 400px;
+    background: #ffffff;
+    border: 1px solid #e7e6eb;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 40px 40px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    h3 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      color: #333333;
+      margin: 24px 0 16px 0;
+    }
+
+    h4 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      color: #333333;
+      margin-bottom: 8px;
+    }
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #333333;
+      margin-bottom: 24px;
+    }
+
+    h5 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #666666;
+      margin-bottom: 16px;
+    }
+
+    .flex {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 32px;
+
+      .color {
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 16px;
+      }
+
+      .color:last-child {
+        margin-right: 0;
+      }
+
+      .active {
+        border: 4px solid #000000;
+      }
+
+      .dactive {
+        border: 4px solid #ffffff;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 0 13px 0;
+      border-radius: 8px;
+    }
+
+    .add {
+      background: #fbbf23;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      color: #333333;
+      margin-bottom: 16px;
+    }
+
+    .buy {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      color: #333333;
+      border: 1px solid #61a5fa;
+      background: #ffffff;
+      margin-bottom: 32px;
+    }
+
+    .read {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration-line: underline;
+      color: #61a5fa;
+      margin: 0;
+      a {
+        color: #61a5fa;
+      }
+    }
+  }
+}

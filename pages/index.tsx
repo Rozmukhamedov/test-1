@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Roboto } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Home.module.scss";
+import { Button } from "@/components";
+import DefaultImage from "@/assets/images/card.png";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -11,6 +14,7 @@ const roboto = Roboto({
 });
 
 export default function Home() {
+  const [scolor, setScolor] = useState(1);
   return (
     <>
       <Head>
@@ -19,7 +23,46 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${roboto.className}`}></main>
+      <main className={`${styles.main} ${roboto.className}`}>
+        <div className={styles.card}>
+          <Image src={DefaultImage} alt="Image" />
+          <h3>$100</h3>
+          <h4>Zebronics head phone</h4>
+          <p>
+            A portable headphone with a battery life of 20 hours and IP67
+            rating. Comes with a 3 years warranty.
+          </p>
+          <h5>Choose your colour</h5>
+          <div className={styles.flex}>
+            <div
+              onClick={() => setScolor(1)}
+              className={`${styles.color} ${
+                scolor === 1 ? styles.active : styles.dactive
+              }`}
+              style={{ background: "#EE4444" }}
+            ></div>
+            <div
+              onClick={() => setScolor(2)}
+              className={`${styles.color} ${
+                scolor === 2 ? styles.active : styles.dactive
+              }`}
+              style={{ background: "#3C81F6" }}
+            ></div>
+            <div
+              onClick={() => setScolor(3)}
+              className={`${styles.color} ${
+                scolor === 3 ? styles.active : styles.dactive
+              }`}
+              style={{ background: "#000000" }}
+            ></div>
+          </div>
+          <Button className={styles.add}>Add to cart</Button>
+          <Button className={styles.buy}>Buy now</Button>
+          <p className={styles.read}>
+            <a href="#">Read reviews</a>
+          </p>
+        </div>
+      </main>
     </>
   );
 }
